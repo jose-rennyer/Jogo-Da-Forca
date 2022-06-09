@@ -1,0 +1,20 @@
+Conhecimentos reaprendidos durante o uso do curso
+
+- fillRect
+- fillStyle
+- pincel.arc(x, y, tamanho, inicio(0), 2 * 3.14)
+- pincel.fill()
+- pincel.font = "pixelagem fonte"
+- pincel.fillText("palavra",eixoX, eixoY)
+- pincel.beginPath()
+- pincel.moveTo()
+- pincel.lineTo()
+- pincel.clearRect()
+
+
+//// triangulo básico
+pincel.beginPath()
+pincel.moveTo(100, 20)
+pincel.lineTo(20, 120)
+pincel.lineTo(180, 120)
+pincel.fill()

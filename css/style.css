@@ -1,0 +1,49 @@
+header{
+    margin:0 auto;
+    width:1000px;
+}
+.main{
+    margin:0 auto;
+    width:1000px;
+    height:600px;
+    position:relative;
+    margin-top:20px;
+}
+canvas{
+    display:block;
+    margin:0 auto;
+    border:1px solid #000;
+}
+
+
+
+
+
+
+/*botão start*/
+.area-buttons{
+    display:none;
+    background-color:red;
+    position:absolute;
+    top:200px;
+    left:350px;
+    display:flex;
+    flex-direction:column;
+}
+.bt{
+    display:none;
+    margin-top:20px;
+    font-size:25px;
+    width:10em;
+    height:3em;
+    padding:10px 20px;
+    background-color:green;
+    color:black;
+    border:1px solid #000;
+    border-radius:10px;
+    transition:0.5s all;
+    cursor:pointer;
+}
+.bt:active{
+    background-color:lightgreen;
+}
