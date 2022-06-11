@@ -32,20 +32,21 @@ document.body.addEventListener("keydown", function(e){
                 for(let i = 0; i < palavraDaVez.length; i++){
                     if(e.key == palavraDaVez[i].letra){
                         palavrasEncontradas++
-                        preenche(palavraDaVez[i])
+                        preencheCorreta(palavraDaVez[i])
                     }
                 }
             }else{
                 palavrasUsadas.push(e.key)
                 preencheIncorreta(e.key)
                 palavrasErradas++
+                desenhaForca(palavrasErradas)
             }
         }else{
             alert("Palavra já utilizada")
         }
     }
 
-    if(palavrasEncontradas == palavraCompleta.length){
+    if(palavrasEncontradas == palavraDaVez.length){
         alert("Você ganhou")
         ganhou = true
     }
@@ -88,7 +89,7 @@ function desenhaTracos(word){
 }
 
 // essa função vai receber o como parametro o objeto, que possui a letra que deve ser preenchida, e as coordenadas do eixo "x" e "y"
-function preenche(objeto){
+function preencheCorreta(objeto){
     lapis.font = "30px monospace";
     lapis.fillText(objeto.letra, objeto.x, objeto.y);
 }
