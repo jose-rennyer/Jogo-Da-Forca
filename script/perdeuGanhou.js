@@ -1,9 +1,7 @@
-function lose(erros){
-    if(erros == 7){
-        lapis.font = "40px arial"
-        lapis.fillStyle = "#f00"
-        lapis.fillText("Você perdeu!", 600, 200)
-    }
+function lose(){
+    lapis.font = "40px arial"
+    lapis.fillStyle = "#f00"
+    lapis.fillText("Você perdeu!", 600, 200)
 }
 function win(){
     lapis.font = "40px arial"

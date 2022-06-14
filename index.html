@@ -17,18 +17,39 @@
     <main class="main">
         <div class="area-buttons">
             <button class="bt start">Iniciar jogo</button>
-            <button class="bt new">Iniciar jogo</button>
+            <button class="bt new">Adicionar nova palavra</button>
         </div>
         
+        <div class="area-add invisivel">
+            <textarea type="text" class="input-new" placeholder="Digite aqui a nova palavra"></textarea>
+            <div class="buttons-add">
+                <button class="bt-new">Adicionar e sorteiar</button>
+                <button class="bt-cancel">Cancelar</button>
+            </div>
+            
+        </div>
+
         <section class="section">
             <canvas width="1000" height="500"></canvas>
         </section>
+        <section class="game-buttons invisivel">
+            <button class="new-game-button">Novo jogo</button>
+            <button class="surrender-game-button">Desistir</button>
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         Desenvolvido por José Rennyer
+        <a href="">Linkedin</a>
+        <a href="">gitHub</a>
     </footer>
+
+
+
+
+    <script src="script/palavras.js"></script>
     <script src="script/script.js"></script>
+    <script src="script/adicionaNovaPalavra.js"></script>
     <script src="script/validacoes.js"></script>
     <script src="script/corretoIncorreto.js"></script>
     <script src="script/desenhaForca.js"></script>

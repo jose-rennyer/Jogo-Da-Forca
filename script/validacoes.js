@@ -1,38 +1,41 @@
 function possibilidadeDeJogar(palavraDigitada){
-    return palavrasValidas.includes(palavraDigitada) && (palavrasErradas < 7 && !ganhou)
+    return eValida(palavraDigitada) && (palavrasErradas < 7 && !ganhou)
 }
 
+function eValida(word){
+   let palavrasValidas = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
+    'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    return palavrasValidas.includes(word)
+}
 
-/*
-///////////////////////////////////////////////////////////////////////////////////////////////////////////
-    function eValida(word){
-       let palavrasValidas = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O',
-        'P', 'Q', 'R', 'R', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-        return palavrasValidas.includes(word)? true:false
-    }
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////
-*/
-/*
-////////////////////////////////////////////////////////////////////
-    function verificaLetraInclusa(palavraSorteada, word){
-        return palavraSorteada.includes(word)
-    }
-///////////////////////////////////////////////////////////////////////
-    ai a verificação será 
-    if(possibilidadeDeJogar(word)){ // for true
-        if(eValida(word)){
-            if(verificaLetraInclusa(word)){
-                palavrasCorretas++
+function inclusa(word, palavraVerificada){
+    lapis.fillStyle = "green"
+    return palavraVerificada.includes(word)
+}
+
+function jaUsada(word, palavrasUsadas){
+    return palavrasUsadas.includes(word)
+}
+function verifica(palavrasEncontradas, palavraSecretaQt){
+    return palavrasEncontradas == palavraSecretaQt
+}
+function todasVerificacoes(word){
+    if(possibilidadeDeJogar(word)){
+        if(!jaUsada(word, palavrasUsadas)){
+            if(palavraCompleta.includes(word)){
+                for(let i = 0; i < palavraDaVez.length; i++){
+                    if(word == palavraDaVez[i].letra){
+                        preencheCorreta(palavraDaVez[i])
+                        ganhou = verifica(palavrasEncontradas, palavraDaVez.length)
+                        ganhou? win():""
+                    }
+                } 
             }else{
-                palavrasErradas++
+                preencheIncorreta(word)
+                desenhaForca(palavrasErradas)
+                palavrasErradas > 6? lose():""
             }
+            palavrasUsadas.push(word) 
         }
     }
-*/
-
-/*
-    função que verifica se as palavras encontradas são a mesma quantidade das palavras da vez
-*/
-    function verifica(palavrasEncontradas, palavraSecretaQt){
-        return palavrasEncontradas == palavraSecretaQt? true:false
-    }
+}
