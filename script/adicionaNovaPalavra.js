@@ -30,7 +30,7 @@ botaoAddNewWord.addEventListener("click", ()=>{
 // Botão novo jogo e desistir
 
 function showButtons(){
-    document.querySelector(".game-buttons").style.display = "flex"
+    document.querySelector(".game-buttons").style.display = "flex";
 }
 function clearButtons(){
     document.querySelector(".game-buttons").style.display = "none"

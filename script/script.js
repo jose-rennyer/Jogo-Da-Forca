@@ -8,6 +8,8 @@ let palavrasEncontradas = 0
 let ganhou = false
 let botaoStart = document.querySelector(".start")
 let comecou = false
+const inputVerify = document.querySelector(".question");
+const buttonVerify = document.querySelector(".bt-verify");
 
 lapis.fillStyle = "lightgreen"
 lapis.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight)
@@ -20,10 +22,11 @@ botaoStart.addEventListener("click", ()=> {
 
 
 
-document.body.addEventListener("keydown", function(e){
+buttonVerify.addEventListener("click", ()=>{
     if(comecou){
-        let palavraDigitada = e.key.toUpperCase();
+        let palavraDigitada = inputVerify.value.toUpperCase();
         todasVerificacoes(palavraDigitada)
+        inputVerify.value = ""
     }
     
 })

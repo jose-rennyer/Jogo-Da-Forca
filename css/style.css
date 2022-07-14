@@ -115,3 +115,17 @@ canvas{
     background-color:#bbb;
 }
 
+.question{
+    font-size:1.3rem;
+    outline:0;
+    padding:0.5rem 1rem;
+}
+.bt-verify{
+    font-size:1.3rem;
+    padding:0.5rem 1rem;
+    border:1px solid #000;
+    border-radius:10px;
+    background-color:pink;
+    color:#000;
+}
+
